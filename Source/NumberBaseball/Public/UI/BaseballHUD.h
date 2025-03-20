@@ -16,9 +16,9 @@ class NUMBERBASEBALL_API ABaseballHUD : public AHUD
 {
 	GENERATED_BODY()
 
-public:
-	ABaseballHUD();
-
+protected:
+	virtual void BeginPlay() override;
+	
 protected:
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<UUserWidget> HUDWidgetClass;

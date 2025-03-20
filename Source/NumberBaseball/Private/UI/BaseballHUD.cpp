@@ -4,7 +4,10 @@
 #include "UI/BaseballHUD.h"
 #include "Blueprint/UserWidget.h"
 
-ABaseballHUD::ABaseballHUD()
+void ABaseballHUD::BeginPlay()
 {
+	Super::BeginPlay();
+	
 	HUDWidget = CreateWidget<UUserWidget>(GetWorld(), HUDWidgetClass);
+	HUDWidget->AddToViewport();
 }

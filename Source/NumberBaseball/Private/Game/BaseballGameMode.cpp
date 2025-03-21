@@ -137,6 +137,7 @@ void ABaseballGameMode::MulticastPrintMessage(const FString& Message, const FLin
 		if (ABaseballPlayerController* PlayerController = Cast<ABaseballPlayerController>(Actor))
 		{
 			PlayerController->ClientReceiveMessage(Message, MessageColor);
+			break;
 		}
 	}
 }

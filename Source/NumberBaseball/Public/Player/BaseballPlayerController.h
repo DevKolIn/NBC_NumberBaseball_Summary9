@@ -19,6 +19,6 @@ public:
 
 	virtual void BeginPlay() override;
 	
-	UFUNCTION(Client, Reliable)
+	UFUNCTION(NetMulticast, Reliable)
 	void ClientReceiveMessage(const FString& Message, const FLinearColor& MessageColor);
 };
